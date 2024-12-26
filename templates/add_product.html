@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Produk</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="contain">
+        <header>
+            <h1>Tambah Produk</h1>
+        </header>
+        <main>
+            <form action="{{ url_for('add_product') }}" method="POST" class="product-form">
+                <label for="name">Nama Produk:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama produk" required><br><br>
+
+                <label for="description">Deskripsi:</label>
+                <input type="text" id="description" name="description" placeholder="Masukkan deskripsi produk" required><br><br>
+
+                <label for="price">Harga:</label>
+                <input type="text" inputmode="numeric" id="price" name="price" placeholder="Masukkan harga produk" required><br><br>
+
+                <label for="stock">Stok:</label>
+                <input type="text" inputmode="numeric" id="stock" name="stock" placeholder="Masukkan jumlah stok" required><br><br>
+
+                <label for="category">Kategori:</label>
+                <select id="category" name="category" required>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.name }}</option>
+                    {% endfor %}
+                </select><br><br>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+            <div class="back-link">
+                <a href="{{ url_for('index') }}" class="btn btn-kembali-produk">Kembali ke Daftar Produk</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial; 
+    background-color: lightgrey; 
+    color: black;
+    line-height: 1.6;
+}
+
+.contain {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    background-color: blue; 
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+
+header a {
+    text-decoration: none;
+    color: white;
+    background-color: lightskyblue; 
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+}
+
+header a:hover {
+    background-color: lightskyblue; 
+}
+
+.tableproduk {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px black;
+}
+
+.tableproduk th, .tableproduk td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    word-wrap: break-word; 
+}
+
+.tableproduk th {
+    background-color: white;
+    color: lightskyblue;
+}
+
+.tableproduk tr:hover {
+    background-color: white; 
+}
+
+
+.tableproduk th:nth-child(5), .tableproduk td:nth-child(5) {
+    width: 200px;
+}
+
+.actions a {
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: lightgreen; 
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #34c759; 
+}
+
+.btn-delete {
+    background-color: red; 
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #c60b02; 
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-form label {
+    font-size: 1.2em;
+    color: black;
+}
+
+.product-form input {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.product-form input:focus {
+    border-color: lightblue; 
+    outline: none;
+}
+
+.product-form select {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: green;
+    color:white;
+    border: none;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: darkgreen; 
+}
+
+.btn-kembali-produk {
+    background-color:blue; 
+    color: white;
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-kembali-produk:hover {
+    width: 100%;
+    background-color: blue; 
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .product-form {
+        gap: 15px;
+    }
+
+    .product-form input {
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+
+    .tableproduk {
+        font-size: 14px;
+    }
+
+    .tableproduk th, .tableproduk td {
+        padding: 12px;
+    }
+
+    header a {
+        font-size: 14px;
+    }
+}
+
+.btn-logout {
+    position: absolute;
+    top: 25px;
+    right: 200px;
+    background-color: red;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #fe382e;
+}
+
+
+.flash-messages {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.flash-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px; 
+    margin: 10px auto;
+}
+
+.flash-message.success {
+    background-color: green;
+    color: white;
+    font-size: 1.2em;
+    border: 1px solid #179432;
+}
+
+.flash-message.danger {
+    background-color: red;
+    color: white;
+}
+
+.flash-message.info {
+    background-color: lightskyblue; 
+    color: white;
+}

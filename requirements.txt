@@ -1,0 +1,8 @@
+Flask
+Flask-SQLAlchemy
+Flask-WTF
+Flask-Migrate
+mysql-connector-python
+flask-login
+
+# pip install -r requirements.txt  
